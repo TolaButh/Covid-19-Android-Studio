@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Covid19TH">
+<androidx.cardview.widget.CardView
+    android:id="@+id/cv_title"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:cardCornerRadius="20dp"
+   android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    app:cardElevation="8dp"
+    android:layout_height="140dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/tv_title_1"
+            android:text="สถานการณ์ Covid-19 ปัจจุบัน"
+            android:fontFamily="@font/promt"
+            android:textColor="@color/green_dark"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_title_2"
+            android:text="ในประเทศไทย"
+            android:fontFamily="@font/promt"
+            android:textColor="@color/green_dark"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cv_confirmed"
+    app:layout_constraintTop_toBottomOf="@id/cv_title"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:cardCornerRadius="20dp"
+   android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    app:cardElevation="8dp"
+    android:layout_height="120dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/yello"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:drawableLeft="@drawable/hospital"
+            android:drawablePadding="10dp"
+            android:id="@+id/tv_confirmed"
+            android:text="ผู้ป่วยยืนยั่น"
+            android:fontFamily="@font/promt"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/v_confirmed"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginTop="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/v_confirmed"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tv_confirmed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_number_confirmed"
+            android:text="32424"
+            android:fontFamily="@font/promt"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/v_confirmed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cv_recovered"
+    app:layout_constraintTop_toBottomOf="@id/cv_confirmed"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:cardCornerRadius="20dp"
+   android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    app:cardElevation="8dp"
+    android:layout_height="120dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/green_900"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:drawableLeft="@drawable/home"
+            android:drawablePadding="10dp"
+            android:id="@+id/tv_recovered"
+            android:text="หายป่วยแล้ว"
+            android:fontFamily="@font/promt"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/v_recovered"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginTop="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/v_recovered"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tv_recovered"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_number_recovered"
+            android:text="45039"
+            android:fontFamily="@font/promt"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/v_recovered"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearlayout"
+        app:layout_constraintTop_toBottomOf="@id/cv_recovered"
+        android:layout_margin="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        >
+        <androidx.cardview.widget.CardView
+
+            app:cardCornerRadius="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            app:cardElevation="8dp"
+            android:layout_height="120dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@color/light_500"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:drawableLeft="@drawable/hospital"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/tv_hospital"
+                    android:text="รักษาตัวอยู่"
+                    android:fontFamily="@font/promt"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/v_hospital"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_marginTop="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:id="@+id/v_hospital"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/tv_hospital"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_number_hospital"
+                    android:text="45039"
+                    android:fontFamily="@font/promt"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/v_hospital"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="4dp"
+            app:cardCornerRadius="20dp"
+            android:layout_weight="1"
+            app:cardElevation="8dp"
+            android:layout_width="0dp"
+            android:layout_height="120dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@color/red_900"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:drawableLeft="@drawable/skull"
+                    android:drawablePadding="10dp"
+                    android:id="@+id/tv_death"
+                    android:text="ตายสะสม"
+                    android:fontFamily="@font/promt"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tv_death"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_marginTop="9dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:id="@+id/v_death"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/tv_death"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_number_death"
+                    android:text="45039"
+                    android:fontFamily="@font/promt"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/v_death"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_newConfirmed"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        app:cardElevation="8dp"
+        android:layout_height="120dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/yello_900"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:drawableLeft="@drawable/home"
+                android:drawablePadding="10dp"
+                android:id="@+id/tv_newConfirmed"
+                android:text="ผู้ป่วยรายใหม่"
+                android:fontFamily="@font/promt"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/v_newConfirmed"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_marginTop="9dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/v_newConfirmed"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/tv_newConfirmed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_number_newConfirmed"
+                android:text="45039"
+                android:fontFamily="@font/promt"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/v_newConfirmed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_update_date"
+        app:layout_constraintTop_toBottomOf="@id/cv_newConfirmed"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="18dp"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        app:cardElevation="8dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_update_date"
+            android:text="Update Date August 31 2021"
+            android:fontFamily="@font/promt"
+            android:textSize="16sp"
+            android:textColor="@color/green_dark"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
